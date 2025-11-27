@@ -1,0 +1,24 @@
+<a href="javascript:openSite()">Click to go to a random site</a>
+<script>
+function openSite() {
+var links = [
+              "https://s.shopee.co.id/9KaDatouZ6",
+              "https://www.amazon.com/AMD-RyzenTM-9600X-12-Thread-Processor/dp/B0D6NN6TM7/?_encoding=UTF8&pd_rd_w=kcVRX&content-id=amzn1.sym.10f16e90-d621-4a53-9c61-544e5c741acc&pf_rd_p=10f16e90-d621-4a53-9c61-544e5c741acc&pf_rd_r=5FZ5ZBN1N2KG5Y3NS0W2&pd_rd_wg=9dmQL&pd_rd_r=c4378afb-d478-43fa-b5f2-60d9060df3ca&ref_=pd_hp_d_btf_exports_top_sellers_unrec",
+              "youtube.com",
+              "reddit.com",
+              "apple.com"]
+
+            openSite = function() {
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              // construct the link to be opened
+              var link = 'http://' + links[randIdx];
+              };
+              
+    return link;
+    
+    document.getElementById("link").innerHTML = openSite();
+}
+</script>
